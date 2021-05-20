@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing the functtion</title>
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		function display(arg) {
+			var pst= "[ ";
+			for(var i=0; i<arg.length;i++){
+				if(i==0){
+					pst += arg[i]; 
+				}else{
+					pst +=  ", " + arg[i];
+				}
+			}
+			pst += ' ]';
+			return pst
+		}
+
+		document.write(`
+			<div>
+				<h1> For First Function </h1>
+				Checking the convertFahrToCelsius function <br/>
+				Using argument as  0 = convertFahrToCelsius(0) which is ${convertFahrToCelsius(0)}<br/>
+				When argument is String "0" = convertFahrToCelsius("0") which is ${convertFahrToCelsius("0")}<br/>
+				Using Wrong argument<br/>
+				"err" = convertFahrToCelsius("err") which is ${convertFahrToCelsius("err")}<br/>
+				[123,33] = convertFahrToCelsius([123,33]) which is ${convertFahrToCelsius([123,33])}<br/>
+				{x:1} = convertFahrToCelsius({x:1}) which is ${convertFahrToCelsius({x:1})}<br/>
+			</div>
+			`)
+
+			document.write(`
+			<div>
+				<h1> For Second Function </h1>
+				Checking the CheckYuGiOh function <br/>
+				When argument is 1 = CheckYuGiOh(1) which is ${display( CheckYuGiOh(1) )}<br/>
+				When argument is String "1" = CheckYuGiOh("1") which is ${display( CheckYuGiOh("1") )}<br/>
+				When argument is 10 = CheckYuGiOh(10) which is ${display( CheckYuGiOh(10) )}<br/>
+				Using Wrong argument<br/>
+				0 = CheckYuGiOh(0) which is ${CheckYuGiOh(0)}<br/>
+				"err" = CheckYuGiOh("err") which is ${CheckYuGiOh("err")}<br/>
+				[123,33] = CheckYuGiOh([123,33]) which is ${CheckYuGiOh([123,33])}<br/>
+				{x:1} = CheckYuGiOh({x:1}) which is ${CheckYuGiOh({x:1})}<br/>
+			</div>
+			`)
+	</script>
+</body>
+</html>
